@@ -29,7 +29,7 @@ function hasRole(mem, role)
 }
 
 client.on('ready', () => {
-    client.user.setActivity("Relax", { type: 1});
+    client.user.setActivity("S.T.A.L.K.E.R.", { type: 1});
    
 
 });
@@ -41,7 +41,12 @@ client.setInterval(function game()
 if(hours == "--" && minutes == "--")//вместо -- ставить время 
 {
  
-    client.users.forEach(cheli => cheli.send("Сообщение для рассылки"))
+    client.users.forEach(cheli => cheli.send("Приветствую на нашем сервере **{server}** !
+Первым делом ознакомься с правилами сервера: #правила 
+Совет:
+Не спеши покидать сервер если на данный момент никто не играет - все мы живые люди,работаем,проводим время с семьёй и т.д.
+Заходи в голосовую "комнату" даже если там никого нет - к тебе присоединятся желающие поиграть в отряде,и аналогично присоединяйся к уже играющим игрокам. Не стесняйся писать в чат предложения о совместной игре.
+По всем вопросам пиши: Tarkovsky (Влад)."))
   
  
 }
@@ -63,8 +68,8 @@ if(message.content.toLowerCase().startsWith("привет"))
 client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
-  if (guild.channels.filter(c => c.name.includes("Название канала, в котором будет приветствие")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("Название канала, в котором будет приветствие")).first().send(`Добро пожаловать, ${member}, на сервер **${guild.name}**!`/*Пример дефолтного приветствия*/);
+  if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Здравствуй,${member},присаживайся у нашего костра,сталкер.`);
 
   /*
 
@@ -77,8 +82,8 @@ client.on("guildMemberAdd", member =>
   
   // Выдача роли
 
-  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`Название роли`)).first() !== undefined) {
-    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`Название роли`)).first();
+  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`Soldiers`)).first() !== undefined) {
+    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`Soldiers`)).first();
 
   member.addRole(foundRole.id)  } else {}
 })
