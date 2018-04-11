@@ -77,8 +77,8 @@ client.on("guildMemberAdd", member =>
   
   // Выдача роли
 
-  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`Soldiers`)).first() !== undefined) {
-    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`Soldiers`)).first();
+  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`soldiers`)).first() !== undefined) {
+    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`soldiers`)).first();
 
   member.addRole(foundRole.id)  } else {}
 })
