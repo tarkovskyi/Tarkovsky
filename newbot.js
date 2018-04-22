@@ -41,7 +41,7 @@ client.setInterval(function game()
 if(hours == "Во сколько часов должна быть рассылка" && minutes == "Во сколько минут должна быть рассылка")//вместо -- ставить время 
 {
  
-    client.users.forEach(cheli => cheli.send("Приветствую на нашем сервере! \nПервым делом ознакомься с правилами сервера: #правила \nСовет:\nНе спеши покидать сервер если на данный момент никто не играет - все мы живые люди,работаем,проводим время с семьёй и т.д.\nЗаходи в голосовую 'комнату' даже если там никого нет - к тебе присоединятся желающие поиграть в отряде,и аналогично присоединяйся к уже играющим игрокам. Не стесняйся писать в чат предложения о совместной игре.\nПо всем вопросам пиши: Tarkovsky (Влад)."))
+    client.users.forEach(cheli => cheli.send("Приветствую на нашем сервере **{Tarkovsky Squad}** ! \nПервым делом ознакомься с правилами сервера: #правила \nСовет:\nНе спеши покидать сервер если на данный момент никто не играет - все мы живые люди,работаем,проводим время с семьёй и т.д.\nЗаходи в голосовую 'комнату' даже если там никого нет - к тебе присоединятся желающие поиграть в отряде,и аналогично присоединяйся к уже играющим игрокам. Не стесняйся писать в чат предложения о совместной игре.\nПо всем вопросам пиши: Tarkovsky (Влад)."))
   
  
 }
@@ -56,7 +56,7 @@ client.on('message', message =>
 if(message.content.toLowerCase().startsWith("привет"))
 {
   
- message.channel.send("Здравствуй,сталкер!")
+ message.channel.send("Салют боец!")
 }
 
 });
@@ -64,7 +64,7 @@ client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`Здравствуй,${member},присаживайся у нашего костра,сталкер.`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Салют боец ${member},прочти #Устав и в бой!`);
 
   /*
 
@@ -77,8 +77,8 @@ client.on("guildMemberAdd", member =>
   
   // Выдача роли
 
-  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`soldiers`)).first() !== undefined) {
-    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`soldiers`)).first();
+  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`ЧВК`)).first() !== undefined) {
+    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`ЧВК`)).first();
 
   member.addRole(foundRole.id)  } else {}
 })
