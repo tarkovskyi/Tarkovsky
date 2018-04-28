@@ -38,7 +38,7 @@ client.setInterval(function game()
 {
     var hours = new Date(Date.now()).getHours().toString()
    var minutes = new Date(Date.now()).getMinutes().toString()
-if(hours 12 "Во сколько часов должна быть рассылка" && minutes 00 "Во сколько минут должна быть рассылка")//вместо -- ставить время 
+if(hours == "12" && minutes == "00")//вместо -- ставить время 
 {
  
     client.users.forEach(cheli => cheli.send("Бойцы,кому нравится наше сообщество - приглашайте знакомых и друзей,или просто размещайте инфу в соцсетях о сервере. Буду благодарен за помощь. п.с. но вход строго от 20+,ясли и детский сад тут не нужны."))
