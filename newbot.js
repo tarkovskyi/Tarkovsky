@@ -82,5 +82,19 @@ client.on("guildMemberAdd", member =>
 
   member.addRole(foundRole.id)  } else {}
 })
+client.on("guildMemberRemove", member =>
+{
+    console.log(member.user.username)
+  let guild = member.guild;
+  if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`**` + member.user.username +`**,пропал безвести в Таркове. K.I.A.`);
+
+  /*
+
+  ${member} - ник пользователя
+  ${guild.name} - название сервера
+  <@${member.id}> - упоминание пользователя
+
+  */
 
 client.login(process.env.BOT_TOKEN);
