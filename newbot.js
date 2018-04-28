@@ -64,7 +64,7 @@ client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`Салют боец ${member},прочти #устав и в бой!`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Салют боец ${member},прочти  #устав и в бой!`);
 
   /*
 
@@ -87,7 +87,7 @@ client.on("guildMemberRemove", member =>
     console.log(member.user.username)
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`K.I.A.,`+ member.user.username+ `,пропал безвести в Таркове. Мы будем помнить тебя.`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`K.I.A. ,`+ member.user.username+ ` ,пропал безвести в Таркове. Мы будем помнить тебя,брат!`);
 
   /*
 
