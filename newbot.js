@@ -38,7 +38,7 @@ client.setInterval(function game()
 {
     var hours = new Date(Date.now()).getHours().toString()
    var minutes = new Date(Date.now()).getMinutes().toString()
-if(hours == "12" && minutes == "00")//вместо -- ставить время 
+if(hours == 12  && minutes == 00 )//вместо -- ставить время 
 {
  
     client.users.forEach(cheli => cheli.send("Бойцы,кому нравится наше сообщество - приглашайте знакомых и друзей,или просто размещайте инфу в соцсетях о сервере. Буду благодарен за помощь. п.с. но вход строго от 20+,ясли и детский сад тут не нужны."))
@@ -87,7 +87,7 @@ client.on("guildMemberRemove", member =>
     console.log(member.user.username)
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`K.I.A.` + member.user.username +`пропал безвести в Таркове..`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`K.I.A.`+ member.user.username +`,пропал безвести в Таркове. Мы будем помнить тебя.`);
 
   /*
 
@@ -96,11 +96,5 @@ client.on("guildMemberRemove", member =>
   <@${member.id}> - упоминание пользователя
 
   */
-
-  
-  
-
- 
 })
-
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN)
