@@ -86,8 +86,8 @@ client.on("guildMemberRemove", member =>
 {
     console.log(member.user.username)
   let guild = member.guild;
-  if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(` `+ member.user.username+ ` - пропал безвести в Таркове. Мы будем помнить тебя,брат!`);
+  if (guild.channels.filter(c => c.name.includes("")).first() !== undefined)
+  guild.channels.filter(c => c.name.includes("")).first().send(` `+ member.user.username+ ``);
 
   /*
 
