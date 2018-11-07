@@ -64,7 +64,7 @@ client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`Здравия желаю,боец: ${member},прочти #правила. Поиск напарников - в голосовых комнатах.`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Здравия желаю,боец: ${member},прочти #правила. Поиск напарников- в голосовых комнатах.`);
 
   /*
 
