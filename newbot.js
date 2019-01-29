@@ -56,7 +56,7 @@ client.on('message', message =>
 if(message.content.toLowerCase().startsWith("привет"))
 {
   
- message.channel.send("Здравия желаю, боец!")
+ message.channel.send("Здравия желаю,боец!")
 }
 
 });
@@ -64,7 +64,7 @@ client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`Здравия желаю, боец ${member}, для начала прочти #правила. Поиск напарников - в голосовых комнатах.`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Здравия желаю,боец ${member},для начала прочти #правила. Поиск напарников - в голосовых комнатах.`);
 
   /*
 
