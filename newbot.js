@@ -56,7 +56,7 @@ client.on('message', message =>
 if(message.content.toLowerCase().startsWith("привет"))
 {
   
- message.channel.send("Здравия желаю,боец!")
+ message.channel.send("Здравия желаю, боец!")
 }
 
 });
