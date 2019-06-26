@@ -29,7 +29,7 @@ function hasRole(mem, role)
 }
 
 client.on('ready', () => {
-    client.user.setActivity("Escape From Tarkov", { type: 1});
+    client.user.setActivity("ВЫЖИВАЧ", { type: 1});
    
 
 });
@@ -64,7 +64,7 @@ client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`Здравия желаю,боец ${member},для начала прочти правила. Поиск напарников - в голосовых комнатах.`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Присаживайся у нашего костра, друг: ${member},для начала прочти правила. Поиск напарников - в голосовых комнатах.`);
 
   /*
 
@@ -77,8 +77,8 @@ client.on("guildMemberAdd", member =>
   
   // Выдача роли
 
-  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`оператор чвк`)).first() !== undefined) {
-    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`оператор чвк`)).first();
+  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`выживший`)).first() !== undefined) {
+    var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`выживший`)).first();
 
   member.addRole(foundRole.id)  } else {}
 })
