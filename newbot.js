@@ -38,7 +38,7 @@ client.setInterval(function game()
 {
     var hours = new Date(Date.now()).getHours().toString()
    var minutes = new Date(Date.now()).getMinutes().toString()
-if(hours == 350  && minutes == 00 )//вместо -- ставить время 
+if(hours == 360  && minutes == 00 )//вместо -- ставить время 
 {
  
     client.users.forEach(cheli => cheli.send("приглашайте знакомых и друзей,или просто размещайте инфу в соцсетях о сервере."))
