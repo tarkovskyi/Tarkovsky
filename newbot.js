@@ -29,7 +29,7 @@ function hasRole(mem, role)
 }
 
 client.on('ready', () => {
-    client.user.setActivity("ВЫЖИВАЧ", { type: 1});
+    client.user.setActivity("выживач", { type: 1});
    
 
 });
