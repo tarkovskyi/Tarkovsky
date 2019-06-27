@@ -29,7 +29,7 @@ function hasRole(mem, role)
 }
 
 client.on('ready', () => {
-    client.user.setActivity("выживач", { type: 1});
+    client.user.setActivity("DayZ", { type: 1});
    
 
 });
@@ -64,7 +64,7 @@ client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`Присаживайся у нашего костра, друг ${member},для начала прочти правила. Поиск напарников - в голосовых комнатах.`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Присаживайся у нашего костра, друг ${member}, для начала прочти правила. Поиск напарников - в голосовых комнатах.`);
 
   /*
 
