@@ -29,7 +29,7 @@ function hasRole(mem, role)
 }
 
 client.on('ready', () => {
-    client.user.setActivity("escape from tarkov", { type: 1});
+    client.user.setActivity("Escape From Tarkov", { type: 1});
    
 
 });
