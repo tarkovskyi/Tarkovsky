@@ -41,7 +41,7 @@ client.setInterval(function game()
 if(hours == 360  && minutes == 00 )//вместо -- ставить время 
 {
  
-    client.users.forEach(cheli => cheli.send("приглашайте знакомых и друзей,или просто размещайте инфу в соцсетях о сервере."))
+    client.users.forEach(cheli => cheli.send(""))
   
  
 }
