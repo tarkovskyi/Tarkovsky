@@ -29,7 +29,7 @@ function hasRole(mem, role)
 }
 
 client.on('ready', () => {
-    client.user.setActivity("escape from tarkov", { type: 1});
+    client.user.setActivity("Escape From Tarkov", { type: 1});
    
 
 });
@@ -56,7 +56,7 @@ client.on('message', message =>
 if(message.content.toLowerCase().startsWith("привет"))
 {
   
- message.channel.send("Здравия желаю,боец!")
+ message.channel.send("Здравия желаю, боец!")
 }
 
 });
@@ -64,7 +64,7 @@ client.on("guildMemberAdd", member =>
 {
   let guild = member.guild;
   if (guild.channels.filter(c => c.name.includes("чат")).first() !== undefined)
-  guild.channels.filter(c => c.name.includes("чат")).first().send(`Присаживайся у нашего костра, друг ${member}.`);
+  guild.channels.filter(c => c.name.includes("чат")).first().send(`Пополнение прибыло: ${member}.`);
 
   /*
 
@@ -77,7 +77,7 @@ client.on("guildMemberAdd", member =>
   
   // Выдача роли
 
-  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`survivor`)).first() !== undefined) {
+  if(guild.roles.filter(r=>r.name.toLowerCase().includes(`escaper`)).first() !== undefined) {
     var foundRole = guild.roles.filter(r=>r.name.toLowerCase().includes(`escaper`)).first();
 
   member.addRole(foundRole.id)  } else {}
